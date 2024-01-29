@@ -1,0 +1,59 @@
+{%- comment -%}
+  <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
+{%- endcomment -%}
+<div class="conscious-shopping-block-container">
+  <div id="conscious-shopping-donation-plan" class="donation-plan hidden">
+    <div id="cs-main-container">
+      <div class="plan-title">
+        <div id="cs-plan-icon" class="plan-icon">
+          <img src="" width="50" height="auto" loading="lazy">
+        </div>
+        <div id="cs-plan-title"></div>
+      </div>
+      <div class="plan-action-buttons">
+        <button id="cs-action-primary"></button>
+        <button id="cs-learn-more-button"></button>
+      </div>
+    </div>
+    <div id="cs-learn-more-container" class="hidden">
+      <div class="projects-container">
+        <div id="cs-projects-title" class="projects-title"></div>
+        <div id="projects-images" class="projects-images">
+          {%- comment -%}
+            <img src="https://conscious-plans.s3.eu-west-1.amazonaws.com/carbon_offsetting/projects_energy.png" alt="" width="auto" height="auto" loading="lazy">
+            <img src="https://conscious-plans.s3.eu-west-1.amazonaws.com/carbon_offsetting/project_tree.png" alt="" width="auto" height="auto" loading="lazy">
+          {%- endcomment -%}
+        </div>
+      </div>
+      <div class="metrics-container">
+        <div id="metrics-text" class="metrics-text">
+          <div class="metrics-title"></div>
+          <div class="metrics-desc"></div>
+        </div>
+        <div id="metric-numbers" class="metrics-numbers"></div>
+      </div>
+    </div>
+  </div>
+  <div id="conscious-shopping-carbon-emissions" class="hidden">
+    <div class="cs-co2-container">
+      <img src="https://cdn.shopify.com/s/files/1/0677/4567/7593/files/Nc8kyQl.png?v=1669391301" width="auto" height="auto" loading="lazy" alt="CO2 Emissions">
+      <div>
+        This order causes
+        <span id="calc-value"></span>
+        kg CO2eq. Together with For the Earth we estimate emissions of every transaction
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %}
+  {% render "app_snippet" %}
+{% endcomment %}
+{% schema %}
+  {
+    "name": "Conscious Shopping",
+    "target": "section",
+    "stylesheet": "app.css",
+    "javascript": "app.js",
+    "settings": []
+  }
+{% endschema %}
