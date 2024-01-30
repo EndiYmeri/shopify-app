@@ -43,7 +43,7 @@ export default function HomePage() {
         ]
        }
       // @ts-ignore
-      await fetch(`https://fortheearth-api.cartediem.org/api/v1/merchant/config/products/${merchant.merchantId}`,{
+      await fetch(`/api/v1/merchant/config/products/${merchant.merchantId}`,{
         method:"POST",
         headers:{
           "Content-Type": "application/json"
@@ -55,27 +55,14 @@ export default function HomePage() {
 
   useEffect( ()=>{
     if(shopId){
-      fetch(`https://fortheearth-api.cartediem.org/api/v1/merchant/config/${shopId}`)
+      fetch(`/api/v1/merchant/config/${shopId}`)
       .then( resp => resp.json())
       .then( merchantInfo => setMerchant(merchantInfo))
     }
   },[shopId])
 
   const handleRedirect = () => {
-    // fetch('https://fortheearth-api.cartediem.org/api/v1/merchant',{
-    //   method: "POST",
-    //   headers: { 
-    //     "Content-Type": "application/json"
-    //   },
-    //   body:JSON.stringify({
-    //     merchantId: shopId,
-    //     website: shop
-    //   })
-    // }).then(resp => resp.json()).then(data => {  
-    //   if(data.merchantId){
-    //     window.open(`https://b2badminportal.cartediem.org/conscious-shopping/${data.merchantId}`,'_blank')
-    //   }
-    // })
+   
   }
 
   return (
@@ -91,7 +78,7 @@ export default function HomePage() {
                 </TextContainer>
               </Stack.Item>
               <Stack.Item>
-                <Link url={`https://app.fortheearthbytwig.co.uk/conscious-shopping/${shopId}`}>
+                <Link url={``}>
                   <button className="button" style={{"background": "#1BD7BB", color: "white", padding: "0.5rem 2rem", fontSize:"1rem", fontWeight:"bold", cursor:"pointer", border:"none", borderRadius: "10px"}}>Set up</button>
                 </Link>
               </Stack.Item>

@@ -5,7 +5,7 @@ import {Product} from '@shopify/shopify-api/dist/rest-resources/2022-10/index.js
 export default async function productCreatorRest(session, productDetails) {
   const product = new Product({session: session});
   console.log(productDetails)
-  product.vendor = "Twig";
+  product.vendor = "";
   product.product_type = "Donation";
   product.title = "Conscious shopping"
   product.published = false;

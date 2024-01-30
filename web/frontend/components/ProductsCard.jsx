@@ -341,7 +341,7 @@ export function ProductsCard ({ merchant, updateMerchantPlan }) {
 
           <Card.Section>
             <Stack spacing="loose">
-              <Link url="https://app.fortheearthbytwig.co.uk/faqs" >
+              <Link url="" >
                 <button
                   className="button"
                   style={{ "background": "#1BD7BB", color: "white", padding: "0.5rem 2rem", fontSize: "1rem", fontWeight: "bold", cursor: "pointer", border: "none", borderRadius: "10px" }}
@@ -350,7 +350,7 @@ export function ProductsCard ({ merchant, updateMerchantPlan }) {
                 </button>
               </Link>
               <a
-                href="mailto:fortheearth@twig-group.com"
+                href=""
                 target={"_blank"}
               >
                 <button
